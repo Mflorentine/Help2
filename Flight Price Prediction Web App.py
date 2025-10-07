@@ -16,7 +16,17 @@ loaded_model = joblib.load('Model.pkl')
 
 # Creating a function
 
-
+input_data = [[
+    1,      # stops
+    1,      # class (encoded)
+    6.2,    # duration
+    15,     # days_left
+    0, 1, 0, 0, 0, 0,       # airline one-hot (indexes 4–9)
+    0, 0, 0, 1, 0, 0,       # source one-hot (indexes 10–15)
+    0, 0, 0, 0, 0, 1,       # dest one-hot (indexes 16–21)
+    0, 0, 0, 0, 1, 0,       # arrival one-hot (indexes 22–27)
+    0, 1, 0, 0, 0, 0        # departure one-hot (indexes 28–33)
+]]
 def Flight_Price_Prediction(input_data):
     
     predicted_price = loaded_model.predict(input_data)
@@ -79,3 +89,4 @@ def main():
     
 
     
+
