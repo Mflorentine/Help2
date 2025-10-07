@@ -11,7 +11,7 @@ import joblib
 import streamlit as st
 
 
-loaded_model = joblib.load('C:/Users/pc/Desktop/ML3/Assignment_ML_Price_Prediction/Model.pkl')
+loaded_model = joblib.load('Model.pkl')
 
 
 # Creating a function
@@ -77,4 +77,5 @@ def main():
     
     
     
+
     
